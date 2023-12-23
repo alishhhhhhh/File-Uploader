@@ -61,9 +61,9 @@ const toastId = toast.loading("Uploading")
       });
     });
 
-    toast.success("Uploaded Successfully"),{
+    toast.success("Uploaded Successfully",{
       id: toastId,
-    }
+    })
     setLoading(false);
 
   };
