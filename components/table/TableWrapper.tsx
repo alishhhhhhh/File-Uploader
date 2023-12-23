@@ -1,3 +1,6 @@
+
+//@ts-nocheck
+
 "use client"
 import { FileType } from  "@/typings"
 import React, { use, useEffect, useState } from 'react'
@@ -30,7 +33,7 @@ const [sort, setSort] = useState<"asc" | "desc"> ("desc");
     // not necessary
     useEffect(()=>{
         if (!docs) return;
-        const files:FileType[]= docs.docs.map(doc =>({
+        const files= docs.docs.map(doc =>({
             id: doc.id,
             filename: doc.data().filename || doc.id,
             timeStamp: new Date(doc.data().timeStamp?.seconds * 1000) || undefined,

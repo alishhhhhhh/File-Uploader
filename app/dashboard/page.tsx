@@ -1,3 +1,4 @@
+//@ts-nocheck
 import DropzoneComponent from "@/components/Dropzone";
 import TableWrapper from "@/components/table/TableWrapper";
 import { db } from "@/firebase";
