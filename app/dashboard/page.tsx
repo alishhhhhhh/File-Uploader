@@ -10,7 +10,7 @@ const page = async () => {
     const { userId }  = auth();
 
     const docResults = await getDocs(collection(db, "users", userId!, "files"),)
-   const skeletonFiles:FileType[]= docResults.docs.map(doc =>({
+   const skeletonFiles= docResults.docs.map(doc =>({
     id:doc.id,
     filename:doc.data().filename || doc.id,
     timeStamp: new Date(doc.data().timeStamp?.seconds * 1000) || undefined,
